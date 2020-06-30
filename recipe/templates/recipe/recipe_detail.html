@@ -1,16 +1,32 @@
-<h1>{{r.title}}</h1>
-<h6>{{r.description}}</h6>
-<p>By: {{r.author}}</p>
-<h3>Ingredients</h3>
-<ul>
-    {%for i in r.ingredient_set.all%}
-        <li>{{i.amount}} {{i.name}}</li>
-    {% endfor %}
-</ul>
-
-<h3>Directions</h3>
-<ol>
-    {%for i in r.instruction_set.all%}
-        <li>{{i.description}}</li>
-    {% endfor %}
-</ol>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>{{r.title}}</h1>
+        <p>By: {{r.author}}</p>
+        <h6>{{r.description}}</h6>
+        
+        <h3>Ingredients</h3>
+        <ul class="list-group">
+            {%for i in r.ingredient_set.all%}
+                <li class="list-group-item">{{i.amount}} {{i.name}}</li>
+            {% endfor %}
+        </ul>
+    
+        <h3>Directions</h3>
+        <ol>
+            {%for i in r.instruction_set.all%}
+                <li>{{i.description}}</li>
+            {% endfor %}
+        </ol>
+    </div>
+ </body>
+</html> 
