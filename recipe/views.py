@@ -9,5 +9,5 @@ def index(request):
     return render(request, "recipe/index.html", context)
 
 def recipe_detail(request, recipe_id):
-    recipe = Recipe.objects.get_object_or_404(pk=recipe_id)
+    recipe = get_object_or_404(Recipe, pk=recipe_id)
     return render(request, "recipe/recipe_detail.html", {"r": recipe})

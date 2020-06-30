@@ -77,9 +77,9 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 DATABASES = {
     'default': {
         "ENGINE": "django.db.backends.postgresql_psycopg2",
-        "NAME": "recipeapp",
-        "USER": "reidarwood",
-        "PASSWORD": "password",
+        "NAME": "recipe",
+        "USER": "ra5",
+        "PASSWORD": "admin5",
         "HOST": "localhost",
         "PORT": "5432",
     }

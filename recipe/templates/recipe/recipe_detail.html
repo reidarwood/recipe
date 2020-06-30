@@ -1,0 +1,16 @@
+<h1>{{r.title}}</h1>
+<h6>{{r.description}}</h6>
+<p>By: {{r.author}}</p>
+<h3>Ingredients</h3>
+<ul>
+    {%for i in r.ingredient_set.all%}
+        <li>{{i.amount}} {{i.name}}</li>
+    {% endfor %}
+</ul>
+
+<h3>Directions</h3>
+<ol>
+    {%for i in r.instruction_set.all%}
+        <li>{{i.description}}</li>
+    {% endfor %}
+</ol>
