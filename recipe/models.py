@@ -1,11 +1,13 @@
 from django.db import models
+from django.utils import timezone
 
 # Create your models here.
 class Recipe(models.Model):
     title = models.CharField(max_length=50)
     description = models.CharField(max_length=200)
     author = models.CharField(max_length=50)
-    pub_date = models.DateTimeField('date published')
+    pub_date = models.DateTimeField('date published', 
+        default=timezone.now)
     views = models.IntegerField(default=0)
     
     def __str__(self):

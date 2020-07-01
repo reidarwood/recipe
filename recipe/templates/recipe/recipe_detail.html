@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Bootstrap Example</title>
+  <title>Recipe</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -13,7 +13,7 @@
         <h1>{{r.title}}</h1>
         <p>By: {{r.author}}</p>
         <h6>{{r.description}}</h6>
-        
+        <p>Views: {{r.views}}</p>
         <h3>Ingredients</h3>
         <ul class="list-group">
             {%for i in r.ingredient_set.all%}
