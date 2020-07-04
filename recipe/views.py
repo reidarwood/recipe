@@ -21,7 +21,7 @@ def signup(request):
             return redirect('index')
     else:
         form = UserCreationForm()
-    return render(request, 'login.html', {'form': form})
+    return render(request, 'recipe/login.html', {'form': form})
 
 # Create your views here.
 def index(request):
